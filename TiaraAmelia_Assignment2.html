@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title> Biodata Tiara Amelia </title>
+
+    <style>
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+		width: 1250px;
+		color: #000;
+		padding: 10px auto;
+		text-align: right;
+  
+}
+
+.navbar a:link {
+  text-decoration: none;
+}
+
+input {
+  width: 100%;
+  padding: 4px 10px;
+  margin: 1px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4c9baf;
+  color: white;
+  padding: 4px 10px;
+  margin: 1px
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form {
+  padding: 1rem;
+  margin: 70px;
+  margin-top: -40px;
+  background-color: rgb(255, 255, 255);
+}
+
+.Bagian1 {
+    background-color: rgb(211, 211, 211);
+		width: 1250px;
+		color: black;
+		margin: 10px auto;
+		padding: 50px;
+}
+
+.Bagian2 {
+    background-color: rgb(211, 211, 211);
+		width: 1250px;
+		color: black;
+		margin: 10px auto;
+		padding: 50px;
+}
+
+
+    </style>
+    </head>
+
+    <body>
+        <div class="navbar" >
+            <tr>
+                <td><a href="">Home</a></td>
+                <td><a href="">Product</a></td>
+                <td><a href="">Gallery</a></td>
+                <td><a href="">Blog</a></td>
+                <td><a href="">Inventory</a></td>
+            </tr>
+        </div>
+
+        <div class="Bagian1">
+            <table>
+                <tr>
+                   <td rowspan="9" width="150px"><img src="https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-512.png" alt="Tiara Amelia" style="width: 90%;"></td> 
+                </tr>
+
+                <td style="font-size: large;" align="center" >
+                    <span id="nama"><b>Tiara Amelia</b><br></span>
+
+                    <span id="role">
+                    <p style="font-size: small;" align="center">Front End Desaigner</p>
+                    </span>
+                    
+                </td>
+                
+                <td> 
+
+                <table class="tabel" style="border-left: 1px black solid; height: 170px; padding-left: 200px;">
+					<tr>
+						<td><b>Availability</b></td>
+						<td><span id="avaibility">: Full Time</span></td>
+						
+					</tr>
+
+					<tr>
+						<td><b>Age</b></td>
+						<td><span id="age">: 20 Years old</span></td>
+					</tr>
+
+					<tr>
+						<td><b>Location</b></td>
+						<td><span id="lokasi">: Bandar Lampung,Indonesia</span></td>
+					</tr>
+
+					<tr>
+						<td><b>Experience</b></td>
+						<td><span id="exp">: 2 Years</span></td>
+					</tr>
+
+					<tr>
+						<td><b>Email</b></td>
+						<td><span id="email"> : emailsaya@email.com </span></td>
+					</tr>	
+
+				</table>
+                </td>
+        
+                <tr>
+                    <td><button class="kontak" style="background-color: rgba(0, 0, 255, 0.473); width: 90px;">Kontak</button> <button style="background-color: rgba(255, 255, 255, 0.452); width: 90px;">Resume</button></td>
+                </tr>                
+            </table>
+        </div>
+       
+        <div class="Bagian2" id="formInput">
+        <div class="form">
+            <div class="input-group">
+                <h4>Nama</h4>
+                <input type="text" name="nama" class="nama" id="namaInput">
+            </div>
+
+            <div class="input-group">
+                <h4>Role</h4>
+                <input type="text" name="role" class="role" id="roleInput">
+            </div>
+
+            <div class="input-group">
+                <h4>Avaibility</h4>
+                <input type="text" name="avaibility" class="avaibility" id="avaibilityInput">
+            </div>
+
+            <div class="input-group">
+                <h4>Age</h4>
+                <input type="text" name="age" class="age" id="ageInput">
+            </div>
+
+            <div class="input-group">
+                <h4>Lokasi</h4>
+                <input type="text" name="lokasi" class="lokasi" id="lokasiInput">
+            </div>
+
+            <div class="input-group">
+                <h4>Your Experience</h4>
+                <input type="text" name="exp" class="exp" id="expInput">
+            </div>
+
+            <div class="input-group">
+                <h4>Email</h4>
+                <input type="email" name="email" class="email" id="emailInput">
+            </div>
+
+            <br>
+
+            <div class="input-group">
+                <button type="submit" class="btn btn-hijau" onclick="SimpanData();sembunyiForm();"> Simpan </button>
+            </div>
+        </div>
+        </div>
+        <script>
+            let id_form = document.getElementById("formInput");
+            function SimpanData(){
+                var nama = document.getElementById("namaInput").value
+                var role = document.getElementById("roleInput").value
+                var avaibility = document.getElementById("avaibilityInput").value
+                var age = document.getElementById("ageInput").value
+                var lokasi = document.getElementById("lokasiInput").value
+                var exp = document.getElementById("expInput").value
+                var email = document.getElementById("emailInput").value
+
+                document.getElementById("nama").innerHTML = nama
+                document.getElementById("role").innerHTML = role
+                document.getElementById("avaibility").innerHTML = avaibility
+                document.getElementById("age").innerHTML = age   
+                document.getElementById("lokasi").innerHTML = lokasi   
+                document.getElementById("exp").innerHTML = exp    
+                document.getElementById("email").innerHTML = email    
+            }
+        
+            function tampilForm(){
+                id_form.style.display = ""
+            }
+        
+            function sembunyiForm(){
+                id_form.style.display = "none"
+            }
+            </script>
+    </body>
+    </html>
